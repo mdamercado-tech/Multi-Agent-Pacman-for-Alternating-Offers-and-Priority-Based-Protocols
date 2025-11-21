@@ -1,0 +1,1412 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const width = 28;
+  const layout = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    3,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    0,
+    0,
+    0,
+    4,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    4,
+    0,
+    0,
+    0,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    3,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    3,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+  ];
+
+  // 0 - pac-dots
+  // 1 - wall
+  // 2 - ghost-lair
+  // 3 - power-pellet
+  // 4 - empty
+
+  const grid = document.querySelector(".grid");
+  const squares = [];
+
+  // createBoard
+  function createBoard() {
+    for (let i = 0; i < layout.length; i++) {
+      const square = document.createElement("div");
+      grid.appendChild(square);
+      squares.push(square);
+      if (layout[i] === 0) square.classList.add("pac-dot");
+      else if (layout[i] === 1) square.classList.add("wall");
+      else if (layout[i] === 2) square.classList.add("ghost-lair");
+      else if (layout[i] === 3) square.classList.add("power-pellet");
+    }
+  }
+  createBoard();
+
+  // ------------------------------
+  // Pacmen
+  const pacmen = [
+    { index: 490, css: "pac-man-1", score: 0, scoreId: "score1", active: true, stall: false, waitTurns: 0 },
+    { index: 492, css: "pac-man-2", score: 0, scoreId: "score2", active: true, stall: false, waitTurns: 0 },
+    { index: 494, css: "pac-man-3", score: 0, scoreId: "score3", active: true, stall: false, waitTurns: 0 }
+  ];
+  pacmen.forEach(p => squares[p.index].classList.add(p.css));
+
+  const pacSpeed = 120; // movement tick (ms)
+  const conflictMetrics = { conflicts: 0, successful: 0 };
+
+  // ------------------------------
+  // Ghosts
+  class Ghost {
+    constructor(name, start, speed, exitIndex) {
+      this.name = name;
+      this.index = start;
+      this.speed = speed;
+      this.isScared = false;
+      this.timerId = null;
+      this.inLair = true;
+      this.exitIndex = exitIndex;
+    }
+  }
+  const ghosts = [
+    new Ghost("ghost1", 348, 250, 322),
+    new Ghost("ghost2", 376, 300, 349),
+    new Ghost("ghost3", 351, 350, 350)
+  ];
+  ghosts.forEach(g => squares[g.index].classList.add(g.name, "ghost"));
+
+  // ------------------------------
+  // Shared Route System
+  const sharedRoutes = {}; // corridorId -> locked by pacman id
+
+function lockRoute(agentId, corridorId) {
+    if (!sharedRoutes[corridorId]) {
+        sharedRoutes[corridorId] = agentId;
+        return true;
+    } else {
+        const holder = sharedRoutes[corridorId];
+        const result = triggerConflictAndResolve(agentId, holder, corridorId);
+
+        // --- Log corridor conflict if it wasn't already
+        const timeNow = Date.now();
+        conflictEventLog.push({
+            strategy: negotiationStrategy,
+            time: timeNow,
+            corridor: corridorId,
+            requester: agentId,
+            holder: holder,
+            winner: result ? agentId : holder,
+            loser: result ? holder : agentId,
+            loserWait: result ? findPacById(holder).waitTurns : findPacById(agentId).waitTurns,
+            negotiationRounds: negotiationStrategy === "alternating" ? ALTERNATING_MAX_ROUNDS : 0,
+            outcome: "locked_corridor_conflict",
+            penalty: negotiationStrategy === "priority" ? PRIORITY_PENALTY : ALTERNATING_FALLBACK_PENALTY
+        });
+
+        return result;
+    }
+}
+
+  function unlockRoute(agentId, corridorId) {
+    if (sharedRoutes[corridorId] === agentId) sharedRoutes[corridorId] = null;
+  }
+
+  // ------------------------------
+  // Negotiation & Protocols (Phase 2)
+  let negotiationStrategy = "priority";
+
+  const PRIORITY_WAIT_TURNS = 2;
+  const PRIORITY_PENALTY = 5;
+  const ALTERNATING_MAX_ROUNDS = 3;
+  const ALTERNATING_FALLBACK_PENALTY = 15;
+  const WAIT_COST_PER_TURN = 3;
+
+  const conflictEventLog = [];
+
+  function makeMessage(sender, receiver, performative, content = {}) {
+    return { sender, receiver, performative, content, timestamp: Date.now() };
+  }
+
+  function findPacById(id) {
+    return pacmen.find(p => p.css === id);
+  }
+
+  function triggerConflictAndResolve(requesterId, holderId, corridorId) {
+    conflictMetrics.conflicts++;
+
+    const requester = findPacById(requesterId);
+    const holder = findPacById(holderId);
+    if (!requester || !holder) return false;
+
+    const conflictTime = Date.now();
+
+    if (negotiationStrategy === "priority") {
+      // --- Priority-based strategy
+      const winner = requester.score >= holder.score ? requester : holder;
+      const loser = winner === requester ? holder : requester;
+
+      sharedRoutes[corridorId] = winner.css;
+
+      loser.waitTurns = PRIORITY_WAIT_TURNS;
+      loser.score = Math.max(0, loser.score - PRIORITY_PENALTY);
+
+      conflictMetrics.successful++;
+
+      conflictEventLog.push({
+        strategy: "priority",
+        time: conflictTime,
+        corridor: corridorId,
+        requester: requester.css,
+        holder: holder.css,
+        winner: winner.css,
+        loser: loser.css,
+        loserWait: PRIORITY_WAIT_TURNS,
+        negotiationRounds: 0,
+        outcome: "winner_by_priority",
+        penalty: PRIORITY_PENALTY
+      });
+
+      return winner === requester;
+
+    } else if (negotiationStrategy === "alternating") {
+      // --- Alternating Offers protocol
+      let proposer = requester;
+      let respondent = holder;
+      let rounds = 0;
+      let accepted = false;
+      let finalWinner = null;
+      let finalLoser = null;
+      let loserWait = 0;
+
+      function respondentUtility(waitTurns) {
+        return - (waitTurns * WAIT_COST_PER_TURN);
+      }
+
+      let offerWait = 1;
+      for (rounds = 1; rounds <= ALTERNATING_MAX_ROUNDS; rounds++) {
+        const msg = makeMessage(proposer.css, respondent.css, "PROPOSE", { corridor: corridorId, wait: offerWait, round: rounds });
+        const utilIfAccept = respondentUtility(offerWait);
+        const fallbackIfReject = -ALTERNATING_FALLBACK_PENALTY;
+
+        if (utilIfAccept >= fallbackIfReject) {
+          const acceptMsg = makeMessage(respondent.css, proposer.css, "ACCEPT", { corridor: corridorId, wait: offerWait });
+          accepted = true;
+
+          sharedRoutes[corridorId] = proposer.css;
+          finalWinner = proposer;
+          finalLoser = respondent;
+          loserWait = offerWait;
+
+          finalLoser.waitTurns = offerWait;
+          finalLoser.score = Math.max(0, finalLoser.score - Math.ceil(offerWait));
+
+          conflictMetrics.successful++;
+
+          conflictEventLog.push({
+            strategy: "alternating",
+            time: conflictTime,
+            corridor: corridorId,
+            requester: requester.css,
+            holder: holder.css,
+            winner: finalWinner.css,
+            loser: finalLoser.css,
+            loserWait,
+            negotiationRounds: rounds,
+            outcome: "accepted",
+            penalty: Math.ceil(offerWait)
+          });
+
+          break;
+
+        } else {
+          const rejectMsg = makeMessage(respondent.css, proposer.css, "REJECT", { corridor: corridorId, reason: "utility_bad", round: rounds });
+          offerWait = Math.min(offerWait + 1, 4);
+          [proposer, respondent] = [respondent, proposer];
+        }
+      }
+
+      if (!accepted) {
+        const lotteryWinner = Math.random() < 0.5 ? requester : holder;
+        const lotteryLoser = lotteryWinner === requester ? holder : requester;
+
+        lotteryWinner.score = Math.max(0, lotteryWinner.score - ALTERNATING_FALLBACK_PENALTY);
+        lotteryLoser.score = Math.max(0, lotteryLoser.score - ALTERNATING_FALLBACK_PENALTY);
+        lotteryLoser.waitTurns = 0;
+
+        sharedRoutes[corridorId] = lotteryWinner.css;
+
+        conflictEventLog.push({
+          strategy: "alternating",
+          time: conflictTime,
+          corridor: corridorId,
+          requester: requester.css,
+          holder: holder.css,
+          winner: lotteryWinner.css,
+          loser: lotteryLoser.css,
+          loserWait: 0,
+          negotiationRounds: ALTERNATING_MAX_ROUNDS,
+          outcome: "fallback_lottery",
+          penalty: ALTERNATING_FALLBACK_PENALTY
+        });
+
+        return lotteryWinner === requester;
+      } else {
+        return finalWinner === requester;
+      }
+    } else {
+      // fallback unknown strategy
+      return triggerConflictAndResolve(requesterId, holderId, corridorId);
+    }
+  }
+
+  // ------------------------------
+  // BFS pathfinding
+  function bfs(start, targets, avoid = []) {
+    const queue = [[start]];
+    const visited = new Set([start]);
+
+    while (queue.length) {
+      const path = queue.shift();
+      const node = path[path.length - 1];
+      if (targets.includes(node)) return path;
+
+      const neighbors = [node - 1, node + 1, node - width, node + width].filter(n =>
+        n >= 0 && n < squares.length && !squares[n].classList.contains("wall") && !avoid.includes(n)
+      );
+
+      for (const n of neighbors) {
+        if (!visited.has(n)) {
+          visited.add(n);
+          queue.push([...path, n]);
+        }
+      }
+    }
+    return null;
+  }
+
+  // ------------------------------
+  // Conflict detection & resolution helpers
+  function detectConflicts(proposals) {
+      const conflicts = [];
+      const positions = {};
+      proposals.forEach(p => {
+          if (!positions[p.move]) positions[p.move] = [];
+          positions[p.move].push(p.pac);
+      });
+      Object.keys(positions).forEach(pos => {
+          if (positions[pos].length > 1) conflicts.push(positions[pos]);
+      });
+      return conflicts;
+  }
+
+  function resolveConflict(conflictGroup) {
+      conflictMetrics.conflicts++;
+      conflictGroup.sort((a, b) => b.score - a.score);
+      const winner = conflictGroup[0];
+      const losers = conflictGroup.slice(1);
+      losers.forEach(p => {
+          p.stall = true;
+          p.score = Math.max(0, p.score - 1);
+      });
+      conflictMetrics.successful++;
+
+    // --- Log each conflict for CSV
+    const timeNow = Date.now();
+    losers.forEach(loser => {
+        conflictEventLog.push({
+            strategy: negotiationStrategy,
+            time: timeNow,
+            corridor: `c${loser.index}`,
+            requester: loser.css,
+            holder: winner.css,
+            winner: winner.css,
+            loser: loser.css,
+            loserWait: 1,
+            negotiationRounds: 0,
+            outcome: "winner_by_score",
+            penalty: 1
+        });
+    });
+
+    return winner;
+}
+
+  // ------------------------------
+  // Predict next move
+  function predict_next_move(pac, steps = 2) {
+    const ghostIndexes = ghosts.map(g => g.index);
+    const avoid = [...ghostIndexes];
+    ghostIndexes.forEach(gIndex => {
+      [gIndex - 1, gIndex + 1, gIndex - width, gIndex + width].forEach(n => {
+        if (n >= 0 && n < squares.length) avoid.push(n);
+      });
+    });
+
+    const pelletTargets = squares
+      .map((s, i) => (s.classList.contains("pac-dot") || s.classList.contains("power-pellet") ? i : -1))
+      .filter(i => i !== -1);
+
+    const path = bfs(pac.index, pelletTargets, avoid.concat(pacmen.filter(x => x !== pac).map(x => x.index)));
+    if (!path) return [];
+    return path.slice(1, steps + 1);
+  }
+
+  // ------------------------------
+  // Pacmen turn
+  function pacmenTurn() {
+    const proposals = [];
+
+    pacmen.filter(p => p.active).forEach(p => {
+      if (p.waitTurns && p.waitTurns > 0) { p.waitTurns--; return; }
+      if (p.stall) {
+        const alternatives = [p.index - 1, p.index + 1, p.index - width, p.index + width].filter(n =>
+          n >= 0 && n < squares.length && !squares[n].classList.contains("wall") && !pacmen.filter(x => x !== p).map(x => x.index).includes(n)
+        );
+        if (alternatives.length > 0) proposals.push({ pac: p, move: alternatives[Math.floor(Math.random() * alternatives.length)] });
+        else proposals.push({ pac: p, move: p.index });
+        p.stall = false;
+        return;
+      }
+
+      const nextSteps = predict_next_move(p, 2);
+      if (nextSteps.length === 0) {
+        const moves = [p.index - 1, p.index + 1, p.index - width, p.index + width].filter(n =>
+          n >= 0 && n < squares.length && !squares[n].classList.contains("wall") && !pacmen.filter(x => x !== p).map(x => x.index).includes(n)
+        );
+        if (moves.length > 0) proposals.push({ pac: p, move: moves[Math.floor(Math.random() * moves.length)] });
+        else proposals.push({ pac: p, move: p.index });
+        return;
+      }
+
+      let conflictAhead = false;
+      pacmen.filter(x => x !== p && x.active).forEach(other => {
+        const otherSteps = predict_next_move(other, 2);
+        if (otherSteps.some(s => nextSteps.includes(s))) conflictAhead = true;
+      });
+
+      if (conflictAhead) {
+        const alternatives = [p.index - 1, p.index + 1, p.index - width, p.index + width].filter(n =>
+          n >= 0 && n < squares.length && !squares[n].classList.contains("wall") && !pacmen.filter(x => x !== p).map(x => x.index).includes(n)
+        );
+        const pelletAlternatives = alternatives.filter(a => squares[a] && (squares[a].classList.contains("pac-dot") || squares[a].classList.contains("power-pellet")));
+        if (pelletAlternatives.length > 0) proposals.push({ pac: p, move: pelletAlternatives[Math.floor(Math.random() * pelletAlternatives.length)] });
+        else if (alternatives.length > 0) proposals.push({ pac: p, move: alternatives[Math.floor(Math.random() * alternatives.length)] });
+        else { p.stall = true; proposals.push({ pac: p, move: p.index }); }
+      } else proposals.push({ pac: p, move: nextSteps[0] });
+    });
+
+    const conflicts = detectConflicts(proposals);
+    conflicts.forEach(group => resolveConflict(group));
+
+    for (const p of proposals) {
+      if (!p || !p.pac || !p.move) continue;
+      if (p.pac.waitTurns && p.pac.waitTurns > 0) continue;
+      if (p.pac.stall) { p.pac.stall = false; continue; }
+
+      let corridorId = `c${p.move}`;
+      let locked = lockRoute(p.pac.css, corridorId);
+
+      if (!locked) {
+        const alternatives = [p.pac.index - 1, p.pac.index + 1, p.pac.index - width, p.pac.index + width].filter(n =>
+          n >= 0 && n < squares.length && !squares[n].classList.contains("wall") && !pacmen.filter(x => x !== p.pac).map(x => x.index).includes(n)
+        );
+        const pelletAlternatives = alternatives.filter(a => squares[a] && (squares[a].classList.contains("pac-dot") || squares[a].classList.contains("power-pellet")));
+        if (pelletAlternatives.length > 0) p.move = pelletAlternatives[Math.floor(Math.random() * pelletAlternatives.length)];
+        else if (alternatives.length > 0) p.move = alternatives[Math.floor(Math.random() * alternatives.length)];
+        else { p.pac.stall = true; continue; }
+        const altCorridorId = `c${p.move}`;
+        locked = lockRoute(p.pac.css, altCorridorId);
+        if (!locked) { p.pac.stall = true; continue; }
+        else corridorId = altCorridorId;
+      }
+
+      squares[p.pac.index].classList.remove(p.pac.css);
+      p.pac.index = p.move;
+      squares[p.pac.index].classList.add(p.pac.css);
+
+      unlockRoute(p.pac.css, corridorId);
+
+      if (squares[p.pac.index].classList.contains("pac-dot")) {
+        p.pac.score++;
+        squares[p.pac.index].classList.remove("pac-dot");
+      }
+      if (squares[p.pac.index].classList.contains("power-pellet")) {
+        p.pac.score += 10;
+        squares[p.pac.index].classList.remove("power-pellet");
+        ghosts.forEach(g => g.isScared = true);
+        setTimeout(() => ghosts.forEach(g => g.isScared = false), 8000);
+      }
+      document.getElementById(p.pac.scoreId).textContent = p.pac.score;
+    }
+
+    // Ghost collision
+    pacmen.filter(p => p.active).forEach(p => {
+      ghosts.forEach(g => {
+        if (p.index === g.index && !g.isScared) {
+          p.active = false;
+          squares[p.index].classList.remove(p.css);
+          document.getElementById(p.scoreId).textContent = "OUT!";
+        }
+      });
+    });
+
+    updateConflictLog();
+    checkWin();
+  }
+
+// ------------------------------
+// Ghost movement
+function moveGhosts() {
+    const reserved = new Set(); // track future positions to prevent overlap
+
+    ghosts.forEach(g => {
+        let nextIndex = g.index;
+
+        if (g.inLair) {
+            const path = bfs(g.index, [g.exitIndex]);
+            if (path && path.length > 1) nextIndex = path[1];
+            if (nextIndex === g.exitIndex) g.inLair = false;
+        } else {
+            const alivePac = pacmen.filter(p => p.active);
+            if (alivePac.length > 0) {
+                let closest = alivePac[0];
+                let minDist = Math.abs(g.index - closest.index);
+                alivePac.forEach(p => {
+                    const dist = Math.abs(g.index - p.index);
+                    if (dist < minDist) { minDist = dist; closest = p; }
+                });
+                const path = bfs(g.index, [closest.index]);
+                if (path && path.length > 1) nextIndex = path[1];
+            }
+        }
+
+        // Prevent ghosts from overlapping
+        if (reserved.has(nextIndex)) {
+            const alternatives = [g.index - 1, g.index + 1, g.index - width, g.index + width]
+                .filter(n => n >= 0 && n < squares.length && !squares[n].classList.contains("wall") && !reserved.has(n));
+            if (alternatives.length > 0) nextIndex = alternatives[Math.floor(Math.random() * alternatives.length)];
+            else nextIndex = g.index; // stay in place if blocked
+        }
+
+        reserved.add(nextIndex);
+
+        // Handle Pac collision
+        pacmen.filter(p => p.active && p.index === nextIndex).forEach(p => {
+            p.active = false;
+            squares[p.index].classList.remove(p.css);
+            document.getElementById(p.scoreId).textContent = "OUT!";
+        });
+
+        // Move ghost in DOM
+        if (g.index !== nextIndex) {
+            squares[g.index].classList.remove(g.name, "ghost", "scared-ghost");
+        }
+
+        g.index = nextIndex;
+        squares[g.index].classList.add(g.name, "ghost");
+        if (g.isScared) squares[g.index].classList.add("scared-ghost");
+        else squares[g.index].classList.remove("scared-ghost");
+    });
+}
+
+// ------------------------------
+// Win/lose check
+function checkWin() {
+  const activePac = pacmen.filter(p => p.active);
+  if (activePac.length === 0) {
+    clearInterval(gameInterval);
+    alert("Game Over!");
+  } else if (activePac.length === 1 && pacmen.every(p => !p.active || p === activePac[0])) {
+    clearInterval(gameInterval);
+    alert(`Pacman ${activePac[0].css} won with ${activePac[0].score} points!`);
+  }
+}
+
+  // ------------------------------
+  // Game Loop
+  function gameLoop() {
+    pacmenTurn();
+    moveGhosts();
+  }
+
+  // ------------------------------
+  // Update log display
+const logDiv = document.createElement("div");
+logDiv.style.position = "fixed";
+logDiv.style.top = "10px";
+logDiv.style.right = "10px";
+logDiv.style.color = "white";
+logDiv.style.fontSize = "13px";
+logDiv.style.backgroundColor = "rgba(0,0,0,0.7)";
+logDiv.style.padding = "10px";
+logDiv.style.borderRadius = "6px";
+logDiv.style.zIndex = 1000;
+logDiv.style.maxWidth = "320px";
+logDiv.style.maxHeight = "60vh";
+logDiv.style.overflowY = "auto";
+document.body.appendChild(logDiv);
+
+function formatTime(ts) {
+    const d = new Date(ts);
+    return `${d.getMinutes()}:${String(d.getSeconds()).padStart(2,"0")}`;
+}
+
+function updateConflictLog() {
+    const recent = conflictEventLog.slice(-6).reverse();
+    let html = `<div><strong>Conflicts:</strong> ${conflictMetrics.conflicts} &nbsp; <strong>Negotiations:</strong> ${conflictMetrics.successful}</div>`;
+    html += "<hr style='opacity:.3;margin:6px 0'/>";
+    recent.forEach(ev => {
+        html += `<div style="margin-bottom:6px">
+            <div style="font-size:12px;color:#ddd">${formatTime(ev.time)} &nbsp; [${ev.strategy}]</div>
+            <div style="font-size:13px">${ev.corridor} — Winner: <b>${ev.winner}</b> | Loser: <b>${ev.loser}</b></div>
+            <div style="font-size:12px;color:#bbb">Rounds:${ev.negotiationRounds} Wait:${ev.loserWait} Outcome:${ev.outcome} Penalty:${ev.penalty}</div>
+        </div>`;
+    });
+    logDiv.innerHTML = html;
+}
+
+  function checkWin() {
+    if (pacmen.filter(p => p.active).length === 0) {
+      clearInterval(gameInterval);
+      alert("All Pacmen lost!");
+    }
+  }
+
+  // ------------------------------
+  // Start game
+  function startGame(e) {
+    if (e.key === "Enter") {
+      document.getElementById("start-screen").style.display = "none";
+      document.removeEventListener("keydown", startGame);
+      gameInterval = setInterval(gameLoop, pacSpeed);
+    }
+  }
+  document.addEventListener("keydown", startGame);
+
+  // Optional: keyboard toggle for strategy (for testing)
+  // Press '1' -> priority, '2' -> alternating
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "1") negotiationStrategy = "priority";
+    if (e.key === "2") negotiationStrategy = "alternating";
+  });
+  // ---------------------------------------------------------
+  // UI: Strategy Switch + Export CSV
+  // ---------------------------------------------------------
+
+  // Floating UI container
+const uiBox = document.createElement("div");
+uiBox.style.position = "fixed";
+uiBox.style.bottom = "10px";
+uiBox.style.right = "10px";
+uiBox.style.padding = "10px";
+uiBox.style.background = "rgba(0,0,0,0.7)";
+uiBox.style.borderRadius = "6px";
+uiBox.style.color = "white";
+uiBox.style.fontSize = "14px";
+uiBox.style.zIndex = 2000;
+
+uiBox.innerHTML = `
+    <div><strong>Negotiation Strategy</strong></div>
+    <select id="strategy-select" style="margin-top:5px;width:100%;padding:4px;border-radius:4px;">
+      <option value="priority">Priority</option>
+      <option value="alternating">Alternating</option>
+    </select>
+    <button id="export-csv" style="margin-top:10px;width:100%;padding:6px;border-radius:4px;background:#444;color:white;border:none;cursor:pointer;">
+      Export Conflict Log (CSV)
+    </button>
+`;
+document.body.appendChild(uiBox);
+
+// Update strategy when dropdown changes
+document.getElementById("strategy-select").addEventListener("change", (e) => {
+    negotiationStrategy = e.target.value;
+});
+
+// CSV Export
+document.getElementById("export-csv").addEventListener("click", () => {
+    if (conflictEventLog.length === 0) {
+        alert("No conflict events recorded yet.");
+        return;
+    }
+    const headers = Object.keys(conflictEventLog[0]).join(",");
+    const rows = conflictEventLog.map(ev => Object.values(ev).join(","));
+    const csvContent = [headers, ...rows].join("\n");
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "conflicts_log.csv";
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+});
+
+});

@@ -1,0 +1,1069 @@
+document.addEventListener("DOMContentLoaded", () => {
+  const width = 28;
+  const squares = [];
+  const layout = [
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    3,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    3,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    1,
+    1,
+    2,
+    2,
+    1,
+    1,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    0,
+    0,
+    0,
+    4,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    4,
+    0,
+    0,
+    0,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    4,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    4,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    3,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    3,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    0,
+    1,
+    1,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+    1,
+  ];
+
+  // 0 - pac-dots
+  // 1 - wall
+  // 2 - ghost-lair
+  // 3 - power-pellet
+  // 4 - empty
+
+  const grid = document.querySelector(".grid");
+
+  // Create board
+  // ------------------------------
+  function createBoard() {
+    for (let i = 0; i < layout.length; i++) {
+      const square = document.createElement("div");
+      grid.appendChild(square);
+      squares.push(square);
+      if (layout[i] === 0) square.classList.add("pac-dot");
+      else if (layout[i] === 1) square.classList.add("wall");
+      else if (layout[i] === 2) square.classList.add("ghost-lair");
+      else if (layout[i] === 3) square.classList.add("power-pellet");
+    }
+  }
+  createBoard();
+
+  // ------------------------------
+  // Pacmen
+  // ------------------------------
+  const pacmen = [
+    { index: 490, css: "pac-man-1", score: 0, scoreId: "score1", active: true },
+    { index: 492, css: "pac-man-2", score: 0, scoreId: "score2", active: true },
+    { index: 494, css: "pac-man-3", score: 0, scoreId: "score3", active: true }
+  ];
+  pacmen.forEach(p => squares[p.index].classList.add(p.css));
+
+  const pacSpeed = 100; // faster movement
+  const conflictMetrics = { conflicts: 0, successful: 0 };
+
+  // ------------------------------
+  // Ghosts
+  // ------------------------------
+  class Ghost {
+    constructor(name, start, speed, exitIndex) {
+      this.name = name;
+      this.index = start;
+      this.speed = speed;
+      this.isScared = false;
+      this.timerId = null;
+      this.inLair = true;
+      this.exitIndex = exitIndex;
+    }
+  }
+  const ghosts = [
+    new Ghost("ghost1", 348, 250, 322),
+    new Ghost("ghost2", 376, 300, 349),
+    new Ghost("ghost3", 351, 350, 350)
+  ];
+  ghosts.forEach(g => squares[g.index].classList.add(g.name, "ghost"));
+
+  // ------------------------------
+  // BFS pathfinding
+  // ------------------------------
+  function bfs(start, targets, avoid = []) {
+    const queue = [[start]];
+    const visited = new Set([start]);
+
+    while (queue.length) {
+      const path = queue.shift();
+      const node = path[path.length - 1];
+      if (targets.includes(node)) return path;
+
+      const neighbors = [node - 1, node + 1, node - width, node + width].filter(n =>
+        n >= 0 &&
+        n < squares.length &&
+        !squares[n].classList.contains("wall") &&
+        !avoid.includes(n)
+      );
+
+      neighbors.forEach(n => {
+        if (!visited.has(n)) {
+          visited.add(n);
+          queue.push([...path, n]);
+        }
+      });
+    }
+    return null;
+  }
+
+  // ------------------------------
+  // Conflict detection & negotiation
+  // ------------------------------
+  function detectConflicts(proposals) {
+    const conflicts = [];
+    const positions = {};
+    proposals.forEach(p => {
+      if (!positions[p.move]) positions[p.move] = [];
+      positions[p.move].push(p.pac);
+    });
+    Object.keys(positions).forEach(pos => {
+      if (positions[pos].length > 1) conflicts.push(positions[pos]);
+    });
+    return conflicts;
+  }
+
+  function resolveConflict(conflictGroup) {
+    conflictMetrics.conflicts++;
+    conflictGroup.sort((a, b) => b.score - a.score);
+    const winner = conflictGroup[0];
+    conflictGroup.slice(1).forEach(p => {
+      p.stall = true;
+      p.score = Math.max(0, p.score - 1); // penalty
+    });
+    conflictMetrics.successful++;
+    return winner;
+  }
+
+  // ------------------------------
+  // Pacmen turn
+  // ------------------------------
+  function pacmenTurn() {
+    const proposals = [];
+
+    pacmen.filter(p => p.active).forEach(p => {
+      const pellets = squares.map((s, i) => (s.classList.contains("pac-dot") || s.classList.contains("power-pellet")) ? i : -1).filter(i => i !== -1);
+      if (pellets.length === 0) return;
+
+      const ghostIndexes = ghosts.map(g => g.index);
+      let path = bfs(p.index, pellets, ghostIndexes.concat(pacmen.filter(x => x !== p).map(x => x.index)));
+
+      // fallback random move if stuck
+      if (!path || path.length < 2) {
+        const moves = [p.index - 1, p.index + 1, p.index - width, p.index + width].filter(n => n >= 0 && n < squares.length && !squares[n].classList.contains("wall") && !ghostIndexes.includes(n));
+        if (moves.length > 0) path = [p.index, moves[Math.floor(Math.random() * moves.length)]];
+      }
+
+      if (path && path.length > 1) proposals.push({ pac: p, move: path[1] });
+    });
+
+    const conflicts = detectConflicts(proposals);
+    conflicts.forEach(group => resolveConflict(group));
+
+    proposals.forEach(p => {
+      if (p.pac.stall) {
+        p.pac.stall = false;
+      } else {
+        squares[p.pac.index].classList.remove(p.pac.css);
+        p.pac.index = p.move;
+        squares[p.pac.index].classList.add(p.pac.css);
+
+        if (squares[p.pac.index].classList.contains("pac-dot")) {
+          p.pac.score++;
+          squares[p.pac.index].classList.remove("pac-dot");
+        }
+        if (squares[p.pac.index].classList.contains("power-pellet")) {
+          p.pac.score += 10;
+          squares[p.pac.index].classList.remove("power-pellet");
+          ghosts.forEach(g => g.isScared = true);
+          setTimeout(() => ghosts.forEach(g => g.isScared = false), 8000);
+        }
+        document.getElementById(p.pac.scoreId).textContent = p.pac.score;
+      }
+    });
+
+    // Ghost collision
+    pacmen.filter(p => p.active).forEach(p => {
+      ghosts.forEach(g => {
+        if (p.index === g.index && !g.isScared) {
+          p.active = false;
+          squares[p.index].classList.remove(p.css);
+          document.getElementById(p.scoreId).textContent = "OUT!";
+        }
+      });
+    });
+
+    updateConflictLog();
+    checkWin();
+  }
+
+  // ------------------------------
+  // Ghost movement
+  // ------------------------------
+function moveGhosts() {
+  ghosts.forEach(g => {
+    // Step 1: Determine next position
+    let nextIndex = g.index;
+
+    if (g.inLair) {
+      const path = bfs(g.index, [g.exitIndex]);
+      if (path && path.length > 1) nextIndex = path[1];
+      if (nextIndex === g.exitIndex) g.inLair = false;
+    } else {
+      const alivePac = pacmen.filter(p => p.active);
+      if (alivePac.length > 0) {
+        let closest = alivePac[0];
+        let minDist = Math.abs(g.index - closest.index);
+        alivePac.forEach(p => {
+          const dist = Math.abs(g.index - p.index);
+          if (dist < minDist) {
+            minDist = dist;
+            closest = p;
+          }
+        });
+        const path = bfs(g.index, [closest.index]);
+        if (path && path.length > 1) nextIndex = path[1];
+      }
+    }
+
+    // Step 2: Collision check before moving
+    pacmen.filter(p => p.active).forEach(p => {
+      if (p.index === nextIndex && !g.isScared) {
+        p.active = false;
+        squares[p.index].classList.remove(p.css);
+        document.getElementById(p.scoreId).textContent = "OUT!";
+        // Ghost does NOT lose its classes
+      }
+    });
+
+    // Step 3: Update ghost position
+    squares[g.index].classList.remove(g.name, "ghost", "scared-ghost");
+    g.index = nextIndex;
+    squares[g.index].classList.add(g.name, "ghost");
+    if (g.isScared) squares[g.index].classList.add("scared-ghost");
+  });
+}
+
+  // ------------------------------
+  // Game loop
+  // ------------------------------
+  let gameInterval = null;
+  function gameLoop() {
+    pacmenTurn();
+    moveGhosts();
+  }
+
+  // ------------------------------
+  // Win condition
+  // ------------------------------
+  function checkWin() {
+    const remainingPellets = squares.filter(s => s.classList.contains("pac-dot") || s.classList.contains("power-pellet")).length;
+    if (remainingPellets === 0 || pacmen.every(p => !p.active)) {
+      clearInterval(gameInterval);
+      const winner = pacmen.reduce((max, p) => (p.score > max.score ? p : max), { score: -1 });
+      alert(`Simulation over! Winner: ${winner.css} with score ${winner.score}`);
+      setTimeout(() => location.reload(), 3000);
+    }
+  }
+
+  // ------------------------------
+  // Conflict log
+  // ------------------------------
+  const logDiv = document.createElement("div");
+  logDiv.style.position = "fixed";
+  logDiv.style.top = "10px";
+  logDiv.style.right = "10px";
+  logDiv.style.color = "white";
+  logDiv.style.fontSize = "14px";
+  logDiv.style.backgroundColor = "rgba(0,0,0,0.6)";
+  logDiv.style.padding = "10px";
+  logDiv.style.borderRadius = "5px";
+  logDiv.style.zIndex = 1000;
+  document.body.appendChild(logDiv);
+
+  function updateConflictLog() {
+    logDiv.innerHTML = `
+      Conflicts: ${conflictMetrics.conflicts} <br>
+      Successful Negotiations: ${conflictMetrics.successful}
+    `;
+  }
+
+  // ------------------------------
+  // Start game
+  // ------------------------------
+  function startGame(e) {
+    if (e.key === "Enter") {
+      document.getElementById("start-screen").style.display = "none";
+      document.removeEventListener("keydown", startGame);
+      gameInterval = setInterval(gameLoop, pacSpeed);
+    }
+  }
+  document.addEventListener("keydown", startGame);
+});
