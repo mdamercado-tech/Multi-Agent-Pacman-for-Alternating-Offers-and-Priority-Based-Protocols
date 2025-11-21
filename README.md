@@ -1,2 +1,9 @@
 # Multi-Agent-Pacman-for-Alternating-Offers-and-Priority-Based-Protocols
-Multi-Agent Pacman for Alternating Offers and Priority-Based Protocols
+
+HOW TO RUN:
+1.) DOWNLOAD FOLDER 
+2.) OPEN INDEX.HTML FILE ON CHROME.
+3.) CHOOSE EITHER PRIORITY OR ALTERNATING AS NEGOTIATION STRATEGY. 
+4.) PRESS ENTER TO START SIMULATION. 
+5.) RUN AND WAIT FOR SIMULATION TO FINISH. 
+6.) DOWNLOAD .CSV FILE. 
